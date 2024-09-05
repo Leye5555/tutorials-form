@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jamb Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        width: 100%;
+        padding: 16px;
+        color: white;
+      }
+
+      h1 {
+        color: black;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .container {
+        border: none;
+        border-radius: 12px;
+        width: 100%;
+        max-width: max-content;
+        height: 100%;
+        padding: 20px;
+        background-image: linear-gradient(
+          45deg,
+          rgb(0, 122, 166),
+          rgb(70, 0, 100),
+          rgb(3, 140, 145)
+        );
+      }
+      .my-form {
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+        width: min(80vw, 450px);
+      }
+
+      .my-form > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .my-form > div > *:first-child {
+        flex: 0.5;
+      }
+      .my-form > div > *:last-child {
+        flex: 1;
+        height: 40px;
+        border-radius: 6px;
+        padding-inline: 8px;
+        border: 0.5px solid rgb(0, 33, 86);
+        max-width: 302px;
+      }
+
+      .my-form > div > *:last-child:focus {
+        outline: 1px solid rgb(0, 42, 139);
+      }
+
+      .submit-btn {
+        justify-content: center;
+      }
+    </style>
+    <script src="./classes.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <h1>Welcome to Jamb Portal</h1>
+    <div class="container">
+      <form class="my-form" action="#" method="post">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div>
+          <label for="Password">Password</label>
+          <input type="password" id="password" />
+        </div>
+        <div class="submit-btn">
+          <button id="submit" type="button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
