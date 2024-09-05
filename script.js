@@ -18,7 +18,7 @@ window.localStorage.setItem(
   "auth",
   JSON.stringify({
     email: "admin@gmail.com",
-    password: "",
+    password: "password",
   })
 );
 
